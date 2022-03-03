@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <h1>Opgave 3</h1>
+    <h3>String manipulation</h3>
+    <div id="app">
+        <input id="inputField" v-model="Word" placeholder="Word">
+        <button type="button" v-on:click="showWord" class="btn btn-primary">Show it</button>
+
+        <div id="outputField" v-if="Word">
+            <ol>
+                <li>{{Result}}</li>
+                <li>{{UpperCaseResult}}</li>
+                <li>{{LowerCaseResult}}</li>
+                <li>{{CapitalizedResult}}</li>
+                <li>{{EndCapitalizedResult}}</li>
+                <li>{{ReversedResult}}</li>
+            </ol>
+
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Word</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td scope="row">1</td>
+                        <td>{{Result}}</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">2</td>
+                        <td>{{UpperCaseResult}}</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">3</td>
+                        <td>{{LowerCaseResult}}</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">4</td>
+                        <td>{{CapitalizedResult}}</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">5</td>
+                        <td>{{EndCapitalizedResult}}</td>
+                    </tr>
+                    <tr>
+                        <td scope="row">6</td>
+                        <td>{{ReversedResult}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <script src="js/index.js"></script>
+</body>
+
+</html>
